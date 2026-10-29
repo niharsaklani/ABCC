@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nihar Sakalni — UI/UX Designer & BCA 1st Year Student Portfolio. Designing intuitive digital products, design systems, and user-centered web and mobile experiences.">
+  <meta name="author" content="Nihar Sakalni">
+  <title>Nihar Sakalni — UI/UX Designer & BCA 1st Year Student</title>
+
+  <!-- Favicon (Clean SVG Vector) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23171717'/><text x='16' y='22' font-family='sans-serif' font-weight='800' font-size='16' fill='%23FFFFFF' text-anchor='middle'>NS</text></svg>">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       SPACE-INSPIRED BACKGROUND (Cosmic Starfield & Ambient Nebulae)
+       ======================================================================== -->
+  <canvas id="spaceBackgroundCanvas" class="space-canvas" aria-hidden="true"></canvas>
+  <div class="space-nebula-overlay" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       1. NAVIGATION BAR (Sticky, Architectural & Accessible)
+       ======================================================================== -->
+  <nav class="navbar" aria-label="Main Navigation">
+    <div class="container navbar-inner">
+      <!-- Brand Logo / Personal Identity -->
+      <a href="#hero" class="brand" aria-label="Nihar Sakalni Portfolio Home">
+        <div class="brand-initials">NS</div>
+        <div class="brand-info">
+          <span class="brand-name">Nihar Sakalni</span>
+          <span class="brand-title">UI/UX Designer • BCA 1st Year</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu Links -->
+      <ul class="nav-menu" role="menubar">
+        <li role="none"><a href="#work" class="nav-link" role="menuitem">Work</a></li>
+        <li role="none"><a href="#process" class="nav-link" role="menuitem">Process</a></li>
+        <li role="none"><a href="#system" class="nav-link" role="menuitem">Design System</a></li>
+        <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+
+      <!-- Action Area: Availability, Theme Toggle, Let's Talk CTA -->
+      <div class="nav-actions">
+        <!-- Availability Indicator Badge -->
+        <div class="status-indicator" title="Currently open for UI/UX internships, apprenticeships & junior roles">
+          <span class="pulse-dot"></span>
+          <span>Open to opportunities</span>
+        </div>
+
+        <!-- Light/Dark Theme Switcher -->
+        <button class="theme-toggle-btn" aria-label="Toggle theme color mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Prominent Let's Talk CTA -->
+        <a href="#contact" class="btn btn-cobalt btn-sm">
+          Let's Talk
+        </a>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Slide-Down Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <a href="#work" class="nav-link">Selected Work</a>
+    <a href="#process" class="nav-link">Methodology & Process</a>
+    <a href="#system" class="nav-link">Design System Tokens</a>
+    <a href="#about" class="nav-link">About & Background</a>
+    <a href="#contact" class="nav-link">Get In Touch</a>
+    <div style="margin-top: auto; padding-top: var(--space-4); border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: var(--space-3);">
+      <button class="btn btn-secondary open-resume-btn" style="width: 100%;">
+        View Resume (PDF)
+      </button>
+      <a href="#contact" class="btn btn-cobalt" style="width: 100%;">
+        Let's Talk
+      </a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         2. HERO SECTION
+         ====================================================================== -->
+    <section class="section hero-section" id="hero">
+      <!-- Celestial Orbital Trajectory Rings -->
+      <div class="hero-orbital-system" aria-hidden="true">
+        <div class="orbital-ring orbital-ring--1">
+          <div class="orbital-planet"></div>
+        </div>
+        <div class="orbital-ring orbital-ring--2">
+          <div class="orbital-planet orbital-planet--violet"></div>
+        </div>
+        <div class="orbital-ring orbital-ring--3"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <!-- Hero Left Column: Editorial Headline & Bio -->
+        <div class="hero-content">
+          <!-- Metadata Bar -->
+          <div class="hero-meta-bar">
+            <span class="location-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              BCA 1st Year Student • Available for UI/UX Internships & Junior Roles
+            </span>
+          </div>
+
+          <!-- Primary Statement Headline -->
+          <h1 class="hero-headline">
+            Designing digital experiences that feel intuitive, look beautiful, and <span class="accent-word">solve real problems.</span>
+          </h1>
+
+          <!-- Supporting Text -->
+          <p class="hero-subhead">
+            I’m a UI/UX Designer focused on creating thoughtful, user-centered digital products through research, interaction design, prototyping, and visual storytelling.
+          </p>
+
+          <!-- Discipline Indicators -->
+          <div class="hero-disciplines">
+            <div class="discipline-badge">
+              <span class="discipline-dot"></span> UX Research
+            </div>
+            <div class="discipline-badge">
+              <span class="discipline-dot"></span> Interface Design
+            </div>
+            <div class="discipline-badge">
+              <span class="discipline-dot"></span> Prototyping
+            </div>
+            <div class="discipline-badge">
+              <span class="discipline-dot"></span> Design Systems
+            </div>
+            <div class="discipline-badge">
+              <span class="discipline-dot"></span> Front-End Code
+            </div>
+          </div>
+
+          <!-- Primary & Secondary CTAs -->
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">
+              Explore My Work
+              <span class="btn-icon btn-icon--down">↓</span>
+            </a>
+            <button class="btn btn-secondary open-resume-btn">
+              Download Resume
+              <span class="btn-icon">↗</span>
+            </button>
+          </div>
+
+          <!-- Live Time Zone Indicator -->
+          <div class="hero-time-ticker">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span id="liveLocalTime">Calculating local time...</span>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Interactive Design Studio Canvas Artifact -->
+        <div class="hero-visual-card" aria-label="Interactive UI Design Artifact">
+          <!-- Window Chrome -->
+          <div class="canvas-toolbar">
+            <div class="canvas-window-controls">
+              <span class="window-dot window-dot--close"></span>
+              <span class="window-dot window-dot--min"></span>
+              <span class="window-dot window-dot--max"></span>
+            </div>
+            <div class="canvas-filename">
+              <span>design-system.tokens.fig</span>
+              <span class="canvas-badge">v3.4 Active</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-tertiary);">
+              100%
+            </div>
+          </div>
+
+          <!-- Canvas Workspace -->
+          <div class="canvas-body">
+            <!-- Interactive Component Inspector -->
+            <div class="canvas-component-preview">
+              <div class="component-header">
+                <span class="component-title">Component: TransactionSyncCard</span>
+                <div class="component-state-pills">
+                  <button class="state-btn active" data-state="default">Default</button>
+                  <button class="state-btn" data-state="hover">Hover</button>
+                  <button class="state-btn" data-state="active">Active</button>
+                  <button class="state-btn" data-state="disabled">Disabled</button>
+                </div>
+              </div>
+
+              <!-- Live Interactive Target Box -->
+              <div class="component-demo-box" id="heroInteractiveDemo">
+                <div class="demo-left">
+                  <div class="demo-avatar">NS</div>
+                  <div class="demo-info">
+                    <h4>Kinetix Rebalance Engine</h4>
+                    <p>Auto-allocation active • 84.6% confidence</p>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-sm" id="heroActionBtn">Sync Account</button>
+              </div>
+
+              <!-- Live Token Specification Readouts -->
+              <div class="canvas-token-chips">
+                <div class="token-chip">
+                  <div class="token-label">Color Token</div>
+                  <div class="token-val">
+                    <span class="token-swatch"></span>
+                    #3157E8
+                  </div>
+                </div>
+                <div class="token-chip">
+                  <div class="token-label">Border Radius</div>
+                  <div class="token-val">8px (radius-md)</div>
+                </div>
+                <div class="token-chip">
+                  <div class="token-label">Typography</div>
+                  <div class="token-val">Inter 600 / 14px</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Animated Designer Pointer with Name Tag -->
+            <div class="designer-cursor">
+              <svg viewBox="0 0 24 24">
+                <polygon points="3 3 10 21 14 14 21 10 3 3"></polygon>
+              </svg>
+              <span class="cursor-pill">Nihar Sakalni (Designing)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. SELECTED WORK / CASE STUDIES (Central Focus)
+         ====================================================================== -->
+    <section class="section section--border-top work-section" id="work">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-eyebrow">01 / Selected Work</span>
+          <h2 class="section-title">Case Studies & Digital Products</h2>
+          <p class="section-description">
+            A curated selection of end-to-end product design, systems architecture, and research-led interfaces. Every project balances rigorous usability with visual refinement.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-bar" role="tablist" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects (4)</button>
+          <button class="filter-btn" data-filter="saas" role="tab" aria-selected="false">SaaS & Web App (2)</button>
+          <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">Mobile Apps (1)</button>
+          <button class="filter-btn" data-filter="systems" role="tab" aria-selected="false">Design Systems (1)</button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="projects-grid">
+          
+          <!-- CASE STUDY 01: KINETIX (FinTech SaaS) -->
+          <article class="project-card" data-category="saas">
+            <!-- Project UI Mockup Preview -->
+            <div class="project-visual" onclick="openCaseStudyModal('kinetix')" role="button" tabindex="0" aria-label="Open Kinetix Case Study">
+              <div class="project-visual-overlay">
+                <span class="overlay-btn">View Detailed Case Study →</span>
+              </div>
+
+              <!-- High-Fidelity FinTech Dashboard UI Mockup (SVG/CSS) -->
+              <div class="ui-mockup-frame">
+                <div class="ui-frame-header">
+                  <div class="ui-frame-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="ui-frame-url">app.kinetix.finance/rebalance</div>
+                  <div style="font-size: 0.5625rem; font-family: var(--font-mono); color: var(--accent-cobalt); font-weight: 600; margin-left: auto;">● LIVE SYNC</div>
+                </div>
+
+                <div class="ui-frame-content">
+                  <!-- KPI Cards Row -->
+                  <div class="fintech-kpis">
+                    <div class="kpi-mini">
+                      <span>Total AUM</span>
+                      <strong>$1,482,920</strong>
+                    </div>
+                    <div class="kpi-mini">
+                      <span>Drift Deviation</span>
+                      <strong style="color: #EF4444;">+4.8% (Action Req)</strong>
+                    </div>
+                    <div class="kpi-mini">
+                      <span>Tax-Loss Alpha</span>
+                      <strong style="color: #10B981;">+$18,400</strong>
+                    </div>
+                  </div>
+
+                  <!-- Sparkline & Allocation Chart SVG -->
+                  <div class="fintech-chart-area">
+                    <svg viewBox="0 0 340 100" preserveAspectRatio="none">
+                      <!-- Grid lines -->
+                      <line x1="0" y1="25" x2="340" y2="25" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="0" y1="50" x2="340" y2="50" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="2,2"/>
+                      <line x1="0" y1="75" x2="340" y2="75" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="2,2"/>
+                      <!-- Fill Area -->
+                      <path d="M0,80 Q40,65 80,45 T160,55 T240,25 T340,15 L340,100 L0,100 Z" fill="rgba(49, 87, 232, 0.08)"/>
+                      <!-- Line -->
+                      <path d="M0,80 Q40,65 80,45 T160,55 T240,25 T340,15" fill="none" stroke="#3157E8" stroke-width="2.5" stroke-linecap="round"/>
+                      <!-- Pulse Target -->
+                      <circle cx="340" cy="15" r="4" fill="#3157E8"/>
+                    </svg>
+                  </div>
+
+                  <!-- Action Bar -->
+                  <div style="display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-tertiary); padding: 6px 8px; border-radius: 4px; font-size: 0.625rem;">
+                    <span style="font-family: var(--font-mono); color: var(--text-secondary);">Batch: 18 Accounts Selected</span>
+                    <span style="background-color: var(--accent-cobalt); color: #FFF; padding: 2px 8px; border-radius: 3px; font-weight: 600;">Execute Rebalance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Details Column -->
+            <div class="project-details">
+              <div class="project-meta-row">
+                <span class="project-category">SaaS Dashboard & Web Application</span>
+                <span class="project-year">2025</span>
+              </div>
+
+              <h3 class="project-heading">Kinetix — Algorithmic Wealth & Multi-Asset Rebalancer</h3>
+              
+              <p class="project-summary">
+                Reimagining institutional portfolio management into an intuitive, high-velocity web experience. Replaced fragmented legacy spreadsheets with a unified drift heatmap and one-click execution workflow.
+              </p>
+
+              <!-- Impact Metrics Box -->
+              <div class="project-impact-box">
+                <div class="impact-item">
+                  <span class="impact-metric">+41%</span>
+                  <span class="impact-label">Trade Execution Speed</span>
+                </div>
+                <div class="impact-item">
+                  <span class="impact-metric">2.4x</span>
+                  <span class="impact-label">Onboarding Completion</span>
+                </div>
+              </div>
+
+              <!-- Tags -->
+              <div class="project-tags">
+                <span class="tag tag--cobalt">Lead Product Designer</span>
+                <span class="tag">UX Research</span>
+                <span class="tag">FinTech</span>
+                <span class="tag">Design Tokens</span>
+              </div>
+
+              <!-- Trigger Button -->
+              <div class="project-footer-action">
+                <button class="btn btn-secondary" onclick="openCaseStudyModal('kinetix')">
+                  Explore Case Study
+                  <span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE STUDY 02: AURA HEALTH (Mobile App) -->
+          <article class="project-card project-card--reversed" data-category="mobile">
+            <!-- Project Visual Mockup Preview -->
+            <div class="project-visual" onclick="openCaseStudyModal('aura')" role="button" tabindex="0" aria-label="Open Aura Health Case Study">
+              <div class="project-visual-overlay">
+                <span class="overlay-btn">View Detailed Case Study →</span>
+              </div>
+
+              <!-- Sleek Mobile Device Mockup -->
+              <div class="mobile-mockup-frame">
+                <div class="mobile-screen">
+                  <div class="mobile-dynamic-island"></div>
+                  
+                  <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.625rem; color: #94A3B8;">
+                    <span>Tuesday, Oct 29</span>
+                    <span>100% Charged</span>
+                  </div>
+
+                  <!-- Circadian Ring Viz -->
+                  <div class="circadian-circle">
+                    <span>RECOVERY</span>
+                    <strong>94%</strong>
+                  </div>
+
+                  <div style="background-color: rgba(255, 255, 255, 0.05); padding: 8px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div style="font-size: 0.625rem; color: #38BDF8; font-weight: 600;">CIRCADIAN PEAK FOCUS</div>
+                    <div style="font-size: 0.5625rem; color: #E2E8F0; margin-top: 2px;">Optimal mental bandwidth until 1:45 PM.</div>
+                  </div>
+
+                  <div style="margin-top: auto; background-color: #3157E8; color: #FFFFFF; text-align: center; padding: 6px; border-radius: 6px; font-size: 0.625rem; font-weight: 600;">
+                    Start 3-Min Respiratory Reset
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Details Column -->
+            <div class="project-details">
+              <div class="project-meta-row">
+                <span class="project-category">iOS & Android Mobile Application</span>
+                <span class="project-year">2026</span>
+              </div>
+
+              <h3 class="project-heading">Aura Health — Personalized Circadian & Mental Wellness</h3>
+              
+              <p class="project-summary">
+                Translating continuous biometric sensor data into restorative daily routines. Grounded in 'Calm Computing' to eliminate notification anxiety and guide daylight, focus, and sleep cycles.
+              </p>
+
+              <!-- Impact Metrics Box -->
+              <div class="project-impact-box">
+                <div class="impact-item">
+                  <span class="impact-metric">78%</span>
+                  <span class="impact-label">Day-30 Retention (vs 22% avg)</span>
+                </div>
+                <div class="impact-item">
+                  <span class="impact-metric">4.9 ★</span>
+                  <span class="impact-label">App Store Rating (12k reviews)</span>
+                </div>
+              </div>
+
+              <!-- Tags -->
+              <div class="project-tags">
+                <span class="tag tag--cobalt">Principal Mobile Designer</span>
+                <span class="tag">Biometrics</span>
+                <span class="tag">Mobile UX</span>
+                <span class="tag">Haptics</span>
+              </div>
+
+              <!-- Trigger Button -->
+              <div class="project-footer-action">
+                <button class="btn btn-secondary" onclick="openCaseStudyModal('aura')">
+                  Explore Case Study
+                  <span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE STUDY 03: PRISM OS (Design System) -->
+          <article class="project-card" data-category="systems">
+            <!-- Project Visual Mockup Preview -->
+            <div class="project-visual" onclick="openCaseStudyModal('prism')" role="button" tabindex="0" aria-label="Open Prism OS Case Study">
+              <div class="project-visual-overlay">
+                <span class="overlay-btn">View Detailed Case Study →</span>
+              </div>
+
+              <!-- Design System Anatomy Frame -->
+              <div class="ui-mockup-frame">
+                <div class="ui-frame-header">
+                  <div class="ui-frame-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="ui-frame-url">prism-tokens.design/specimen</div>
+                  <div style="font-size: 0.5625rem; font-family: var(--font-mono); color: #10B981; margin-left: auto;">WCAG AAA 100%</div>
+                </div>
+
+                <div class="ui-frame-content">
+                  <div class="prism-grid-specimen">
+                    <!-- Swatches Column -->
+                    <div class="specimen-swatches">
+                      <div class="specimen-bar" style="background-color: #3157E8;">cobalt-600 #3157E8</div>
+                      <div class="specimen-bar" style="background-color: #171717;">neutral-900 #171717</div>
+                      <div class="specimen-bar" style="background-color: #10B981;">emerald-500 #10B981</div>
+                      <div class="specimen-bar" style="background-color: #F59E0B;">amber-500 #F59E0B</div>
+                    </div>
+
+                    <!-- Component Matrix Column -->
+                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                      <div style="display: flex; gap: 4px;">
+                        <span style="font-size: 0.5625rem; padding: 2px 6px; background-color: var(--text-primary); color: #FFF; border-radius: 3px;">Button/Primary</span>
+                        <span style="font-size: 0.5625rem; padding: 2px 6px; border: 1px solid var(--border-medium); border-radius: 3px;">Button/Ghost</span>
+                      </div>
+                      <div style="height: 22px; border: 1px solid #3157E8; border-radius: 3px; display: flex; align-items: center; padding: 0 6px; font-size: 0.5625rem; color: #3157E8;">
+                        Focused Input State
+                      </div>
+                      <div style="font-size: 0.5625rem; font-family: var(--font-mono); color: var(--text-secondary); background-color: var(--bg-tertiary); padding: 4px; border-radius: 3px;">
+                        --radius-sm: 6px;<br>--font-mono: 'JetBrains';
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Details Column -->
+            <div class="project-details">
+              <div class="project-meta-row">
+                <span class="project-category">Design System & Design Engineering</span>
+                <span class="project-year">2025–2026</span>
+              </div>
+
+              <h3 class="project-heading">Prism OS — Multi-Brand Design System & Infrastructure</h3>
+              
+              <p class="project-summary">
+                Unified atomic token architecture and 60+ accessible component primitives powering 4 enterprise product suites. Automated token synchronization between Figma, Style Dictionary, and production code.
+              </p>
+
+              <!-- Impact Metrics Box -->
+              <div class="project-impact-box">
+                <div class="impact-item">
+                  <span class="impact-metric">58%</span>
+                  <span class="impact-label">Handoff Velocity Gain</span>
+                </div>
+                <div class="impact-item">
+                  <span class="impact-metric">100%</span>
+                  <span class="impact-label">WCAG AAA Compliance</span>
+                </div>
+              </div>
+
+              <!-- Tags -->
+              <div class="project-tags">
+                <span class="tag tag--cobalt">Design Systems Architect</span>
+                <span class="tag">Design Tokens</span>
+                <span class="tag">Accessibility</span>
+                <span class="tag">Storybook</span>
+              </div>
+
+              <!-- Trigger Button -->
+              <div class="project-footer-action">
+                <button class="btn btn-secondary" onclick="openCaseStudyModal('prism')">
+                  Explore Case Study
+                  <span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE STUDY 04: VESPER (E-Commerce & 3D) -->
+          <article class="project-card project-card--reversed" data-category="saas">
+            <!-- Project Visual Mockup Preview -->
+            <div class="project-visual" onclick="openCaseStudyModal('vesper')" role="button" tabindex="0" aria-label="Open Vesper Case Study">
+              <div class="project-visual-overlay">
+                <span class="overlay-btn">View Detailed Case Study →</span>
+              </div>
+
+              <!-- E-Commerce Minimal Mockup Frame -->
+              <div class="ui-mockup-frame">
+                <div class="ui-frame-header">
+                  <div class="ui-frame-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="ui-frame-url">vesper-objects.ch/collection/chair-02</div>
+                  <div style="font-size: 0.5625rem; font-family: var(--font-mono); color: var(--text-tertiary); margin-left: auto;">CURATED EDITORIAL</div>
+                </div>
+
+                <div class="ui-frame-content">
+                  <div class="vesper-split-mockup">
+                    <div class="vesper-product-view">
+                      <!-- Architectural Chair Blueprint SVG -->
+                      <svg class="vesper-product-wireframe" viewBox="0 0 100 100">
+                        <rect x="25" y="45" width="50" height="8" rx="2" stroke="currentColor"/>
+                        <line x1="30" y1="53" x2="25" y2="85" stroke="currentColor"/>
+                        <line x1="70" y1="53" x2="75" y2="85" stroke="currentColor"/>
+                        <path d="M30,45 L35,20 L65,20 L70,45" stroke="currentColor"/>
+                        <circle cx="50" cy="32" r="3" fill="#3157E8"/>
+                      </svg>
+                      <span style="font-size: 0.5625rem; font-family: var(--font-mono); color: var(--text-secondary); margin-top: 4px;">LOUNGE CHAIR 02</span>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                      <span style="font-family: var(--font-editorial); font-style: italic; font-size: 0.8125rem;">"Aniline Saddle Leather & Brushed Cobalt"</span>
+                      <strong style="font-size: 0.8125rem; font-family: var(--font-mono);">$4,250 USD</strong>
+                      <div style="display: flex; gap: 4px; margin-top: 4px;">
+                        <span style="width: 12px; height: 12px; border-radius: 50%; background-color: #8D5B4C; border: 1px solid #FFF;"></span>
+                        <span style="width: 12px; height: 12px; border-radius: 50%; background-color: #171717; border: 1px solid #FFF;"></span>
+                        <span style="width: 12px; height: 12px; border-radius: 50%; background-color: #3157E8; border: 1px solid #FFF;"></span>
+                      </div>
+                      <div style="margin-top: 6px; background-color: #171717; color: #FFF; font-size: 0.5625rem; text-align: center; padding: 4px; border-radius: 3px;">
+                        Instant Order with Apple Pay
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Details Column -->
+            <div class="project-details">
+              <div class="project-meta-row">
+                <span class="project-category">Premium E-Commerce Experience</span>
+                <span class="project-year">2026</span>
+              </div>
+
+              <h3 class="project-heading">Vesper — Curated Architectural & Spatial E-Commerce</h3>
+              
+              <p class="project-summary">
+                Blending museum-grade editorial aesthetics with real-time 3D material inspection and seamless checkout. Designed for high-value bespoke physical furniture with zero clutter.
+              </p>
+
+              <!-- Impact Metrics Box -->
+              <div class="project-impact-box">
+                <div class="impact-item">
+                  <span class="impact-metric">+34%</span>
+                  <span class="impact-label">Average Order Value (AOV)</span>
+                </div>
+                <div class="impact-item">
+                  <span class="impact-metric">-18%</span>
+                  <span class="impact-label">Product Return Rate</span>
+                </div>
+              </div>
+
+              <!-- Tags -->
+              <div class="project-tags">
+                <span class="tag tag--cobalt">Lead UI/UX Designer</span>
+                <span class="tag">Editorial Design</span>
+                <span class="tag">3D Configuration</span>
+                <span class="tag">E-Commerce</span>
+              </div>
+
+              <!-- Trigger Button -->
+              <div class="project-footer-action">
+                <button class="btn btn-secondary" onclick="openCaseStudyModal('vesper')">
+                  Explore Case Study
+                  <span class="btn-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. DESIGN METHODOLOGY & PROCESS
+         ====================================================================== -->
+    <section class="section section--border-top process-section" id="process">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-eyebrow">02 / Methodology</span>
+          <h2 class="section-title">A Structured, Hypothesis-Driven Approach</h2>
+          <p class="section-description">
+            Design is not decoration; it is the deliberate reduction of user friction. My 4-step framework ensures every design decision is anchored in evidence, validated through rapid testing, and engineered with precision.
+          </p>
+        </div>
+
+        <!-- 4-Phase Process Grid -->
+        <div class="process-grid">
+          
+          <!-- Phase 01 -->
+          <div class="process-card">
+            <span class="process-step-num">01</span>
+            <h3 class="process-card-title">Discover & Empathize</h3>
+            <p class="process-card-desc">
+              Immersing in the user's world through qualitative contextual inquiry, diary studies, and quantitative analytics to expose true pain points.
+            </p>
+            <div class="process-deliverables">
+              <span class="deliverable-title">Key Artifacts</span>
+              <div class="deliverable-list">
+                <span class="deliverable-badge">User Interviews</span>
+                <span class="deliverable-badge">Heuristic Audit</span>
+                <span class="deliverable-badge">Competitive Matrix</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 02 -->
+          <div class="process-card">
+            <span class="process-step-num">02</span>
+            <h3 class="process-card-title">Define & Architect</h3>
+            <p class="process-card-desc">
+              Synthesizing research into razor-sharp problem definitions, Jobs-to-be-Done (JTBD), user flows, and hierarchical information architecture.
+            </p>
+            <div class="process-deliverables">
+              <span class="deliverable-title">Key Artifacts</span>
+              <div class="deliverable-list">
+                <span class="deliverable-badge">Information Architecture</span>
+                <span class="deliverable-badge">Persona Archetypes</span>
+                <span class="deliverable-badge">User Journey Maps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 03 -->
+          <div class="process-card">
+            <span class="process-step-num">03</span>
+            <h3 class="process-card-title">Prototype & Validate</h3>
+            <p class="process-card-desc">
+              Exploring low-fidelity wireframes followed by high-fidelity interactive prototypes. Running usability sprints to test hypotheses before engineering.
+            </p>
+            <div class="process-deliverables">
+              <span class="deliverable-title">Key Artifacts</span>
+              <div class="deliverable-list">
+                <span class="deliverable-badge">Interactive ProtoPie</span>
+                <span class="deliverable-badge">Usability Testing (Maze)</span>
+                <span class="deliverable-badge">Micro-Interactions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 04 -->
+          <div class="process-card">
+            <span class="process-step-num">04</span>
+            <h3 class="process-card-title">Refine & Ship</h3>
+            <p class="process-card-desc">
+              Transforming validated screens into production-ready design tokens, accessible components, pairing closely with engineering for pixel-perfect launch.
+            </p>
+            <div class="process-deliverables">
+              <span class="deliverable-title">Key Artifacts</span>
+              <div class="deliverable-list">
+                <span class="deliverable-badge">Design Tokens (W3C)</span>
+                <span class="deliverable-badge">Storybook Specs</span>
+                <span class="deliverable-badge">WCAG AAA Audits</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. INTERACTIVE DESIGN SYSTEM & TOKEN SPECIMEN
+         ====================================================================== -->
+    <section class="section section--border-top system-section" id="system">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-eyebrow">03 / Craft & Architecture</span>
+          <h2 class="section-title">Front-End Awareness & Atomic Design Tokens</h2>
+          <p class="section-description">
+            Great designers understand the medium of the web. Explore this live interactive token inspector demonstrating the underlying atomic variables, typography scales, and state primitives powering this portfolio.
+          </p>
+        </div>
+
+        <!-- Token Playground Card -->
+        <div class="token-playground-card">
+          <!-- Playground Tabs -->
+          <div class="token-playground-nav" role="tablist">
+            <button class="token-tab-btn active" data-tab="tabColors" role="tab">01. Color Palette Tokens</button>
+            <button class="token-tab-btn" data-tab="tabTypography" role="tab">02. Typography Hierarchy</button>
+            <button class="token-tab-btn" data-tab="tabComponents" role="tab">03. UI Component Primitives</button>
+            <button class="token-tab-btn" data-tab="tabSpacing" role="tab">04. 8pt Spatial System</button>
+          </div>
+
+          <!-- Tab Content 1: Colors -->
+          <div class="token-tab-content active" id="tabColors">
+            <div class="color-tokens-grid">
+              <div class="color-token-item">
+                <div class="color-token-preview" style="background-color: #07080F; border: 1px solid rgba(255,255,255,0.15);"></div>
+                <div class="color-token-meta">
+                  <span class="color-token-name">--bg-primary</span>
+                  <span class="color-token-hex">#07080F (Deep Obsidian)</span>
+                </div>
+              </div>
+
+              <div class="color-token-item">
+                <div class="color-token-preview" style="background-color: #F8FAFC;"></div>
+                <div class="color-token-meta">
+                  <span class="color-token-name">--text-primary</span>
+                  <span class="color-token-hex">#F8FAFC (Starlight White)</span>
+                </div>
+              </div>
+
+              <div class="color-token-item">
+                <div class="color-token-preview" style="background-color: #94A3B8;"></div>
+                <div class="color-token-meta">
+                  <span class="color-token-name">--text-secondary</span>
+                  <span class="color-token-hex">#94A3B8 (Nebula Silver)</span>
+                </div>
+              </div>
+
+              <div class="color-token-item">
+                <div class="color-token-preview" style="background-color: rgba(255, 255, 255, 0.12); border: 1px dashed rgba(255,255,255,0.3);"></div>
+                <div class="color-token-meta">
+                  <span class="color-token-name">--border-subtle</span>
+                  <span class="color-token-hex">rgba(255,255,255,0.09) (Hairline)</span>
+                </div>
+              </div>
+
+              <div class="color-token-item">
+                <div class="color-token-preview" style="background-color: #4361EE;"></div>
+                <div class="color-token-meta">
+                  <span class="color-token-name">--accent-cobalt</span>
+                  <span class="color-token-hex">#4361EE (Cosmic Cobalt)</span>
+                </div>
+              </div>
+
+              <div class="color-token-item">
+                <div class="color-token-preview" style="background-color: #38BDF8;"></div>
+                <div class="color-token-meta">
+                  <span class="color-token-name">--accent-cyan</span>
+                  <span class="color-token-hex">#38BDF8 (Supernova Cyan)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content 2: Typography -->
+          <div class="token-tab-content" id="tabTypography">
+            <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+              <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: var(--space-4);">
+                <span style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--accent-cobalt);">Display Title / 44px — Inter Bold</span>
+                <h2 style="font-size: 2.75rem; font-weight: 800; letter-spacing: -0.035em; line-height: 1.15;">
+                  Simplicity is the resolution of complexity.
+                </h2>
+              </div>
+
+              <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: var(--space-4);">
+                <span style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--accent-cobalt);">Section Subhead / 20px — Inter Medium</span>
+                <p style="font-size: 1.25rem; font-weight: 500; color: var(--text-secondary); line-height: 1.5;">
+                  Modern digital products require harmony between visual hierarchy, micro-interactions, and underlying architecture.
+                </p>
+              </div>
+
+              <div>
+                <span style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--accent-cobalt);">Editorial Accent / 18px — Newsreader Italic</span>
+                <p style="font-family: var(--font-editorial); font-style: italic; font-size: 1.125rem; color: var(--text-primary); line-height: 1.6;">
+                  "Good design is obvious. Great design is transparent." — Joe Sparano
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content 3: Components -->
+          <div class="token-tab-content" id="tabComponents">
+            <div class="component-sandbox">
+              <div class="sandbox-column">
+                <span class="sandbox-group-title">Button Primitives</span>
+                <div class="sandbox-row">
+                  <button class="btn btn-primary btn-sm">Primary</button>
+                  <button class="btn btn-secondary btn-sm">Secondary</button>
+                  <button class="btn btn-cobalt btn-sm">Cobalt Accent</button>
+                </div>
+
+                <span class="sandbox-group-title">Status Tags</span>
+                <div class="sandbox-row">
+                  <span class="tag">Default Tag</span>
+                  <span class="tag tag--cobalt">Cobalt Highlight</span>
+                  <span class="status-indicator"><span class="pulse-dot"></span> Live Status</span>
+                </div>
+              </div>
+
+              <div class="sandbox-column">
+                <span class="sandbox-group-title">Interactive Input Field</span>
+                <div class="demo-input-wrapper">
+                  <input type="text" class="demo-input" placeholder="Type to test focus state..." value="nihar.sakalni@studio.design">
+                </div>
+
+                <span class="sandbox-group-title">Accessibility Check</span>
+                <div style="background-color: var(--bg-elevated); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-size: 0.8125rem; display: flex; align-items: center; justify-content: space-between;">
+                  <span>Contrast Ratio: 14.8:1</span>
+                  <span style="color: var(--status-available); font-weight: 700;">✓ Pass WCAG AAA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content 4: Spacing -->
+          <div class="token-tab-content" id="tabSpacing">
+            <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+              <p style="font-size: 0.875rem; color: var(--text-secondary);">
+                Every component adheres strictly to a base 8-point spatial grid system, ensuring mathematical harmony and seamless front-end translation.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 0.75rem;">
+                  <span style="width: 80px; color: var(--text-tertiary);">--space-2</span>
+                  <div style="width: 8px; height: 16px; background-color: var(--accent-cobalt);"></div>
+                  <span>8px</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 0.75rem;">
+                  <span style="width: 80px; color: var(--text-tertiary);">--space-4</span>
+                  <div style="width: 16px; height: 16px; background-color: var(--accent-cobalt);"></div>
+                  <span>16px</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 0.75rem;">
+                  <span style="width: 80px; color: var(--text-tertiary);">--space-6</span>
+                  <div style="width: 24px; height: 16px; background-color: var(--accent-cobalt);"></div>
+                  <span>24px</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 0.75rem;">
+                  <span style="width: 80px; color: var(--text-tertiary);">--space-8</span>
+                  <div style="width: 32px; height: 16px; background-color: var(--accent-cobalt);"></div>
+                  <span>32px</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 0.75rem;">
+                  <span style="width: 80px; color: var(--text-tertiary);">--space-12</span>
+                  <div style="width: 48px; height: 16px; background-color: var(--accent-cobalt);"></div>
+                  <span>48px</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. ABOUT ME, CAREER TIMELINE & CREDENTIALS
+         ====================================================================== -->
+    <section class="section section--border-top about-section" id="about">
+      <div class="container about-grid">
+        <!-- About Left Column: Portrait & Summary Card -->
+        <div class="about-portrait-card">
+          <div class="portrait-photo-box">
+            <!-- Studio Minimalist Designer Vector Illustration -->
+            <svg class="portrait-svg-illustration" viewBox="0 0 200 220" fill="none">
+              <!-- Geometric Minimalist Portrait Frame -->
+              <rect x="20" y="20" width="160" height="180" rx="12" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+              <!-- Abstract Head silhouette -->
+              <circle cx="100" cy="80" r="36" fill="#171717"/>
+              <!-- Shoulders -->
+              <path d="M50 160 C50 125, 150 125, 150 160 Z" fill="#3157E8"/>
+              <!-- Glasses / Designer Detail -->
+              <circle cx="90" cy="80" r="10" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+              <circle cx="110" cy="80" r="10" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+              <line x1="100" y1="80" x2="100" y2="80" stroke="#FFFFFF" stroke-width="2.5"/>
+              <!-- Grid accent lines -->
+              <line x1="20" y1="180" x2="180" y2="180" stroke="#F3F4F6" stroke-width="1.5"/>
+              <text x="100" y="195" font-family="sans-serif" font-size="9" font-weight="700" fill="#737373" text-anchor="middle" letter-spacing="1">NIHAR SAKALNI • DESIGN & BCA</text>
+            </svg>
+          </div>
+
+          <div class="portrait-caption">
+            <strong>Nihar Sakalni</strong> (he/him)<br>
+            UI/UX Designer & 1st Year BCA (Bachelor of Computer Applications) student. Bridging computer science principles with human-centered interaction design, prototyping, and modern design systems.
+          </div>
+
+          <div style="display: flex; gap: var(--space-2);">
+            <button class="btn btn-secondary btn-sm open-resume-btn" style="flex: 1;">
+              View Resume
+            </button>
+            <a href="#contact" class="btn btn-primary btn-sm" style="flex: 1;">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+
+        <!-- About Right Column: Narrative Story, Experience, & Skills -->
+        <div class="about-narrative">
+          
+          <!-- Narrative Story -->
+          <div class="narrative-block">
+            <span class="section-eyebrow">04 / Background</span>
+            <h2 class="section-title">Designing at the Intersection of Computer Applications and Human Empathy</h2>
+            <p>
+              As a 1st-year Bachelor of Computer Applications (BCA) student and passionate UI/UX designer, I work at the intersection of computer science, interaction architecture, and visual aesthetics. While studying data structures, programming paradigms, and software principles, I channel that technical rigor into building intuitive, accessible digital interfaces that solve real user problems.
+            </p>
+            <p>
+              I believe the most impactful designers understand the technical reality of the web. Because I write semantic HTML, modern CSS, and JavaScript alongside my BCA curriculum, I design with direct empathy for developers—ensuring design tokens, edge cases, and WCAG accessibility standards are built into the foundation from day one.
+            </p>
+          </div>
+
+          <!-- Career Timeline -->
+          <div class="narrative-block">
+            <h3>Education & Design Trajectory</h3>
+            <div class="timeline-list">
+              <!-- Item 1 -->
+              <div class="timeline-item active">
+                <span class="timeline-period">2026 — PRESENT</span>
+                <span class="timeline-role">Bachelor of Computer Applications (BCA) — 1st Year</span>
+                <span class="timeline-company">Undergraduate Program • Computer Applications & Software</span>
+                <p class="timeline-desc">
+                  Building deep foundations in programming, database management, web technologies, and computational thinking while actively applying these concepts to user experience and interface engineering.
+                </p>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="timeline-item">
+                <span class="timeline-period">2024 — 2026</span>
+                <span class="timeline-role">UI/UX & Product Design Practice</span>
+                <span class="timeline-company">Independent Case Studies & Design Systems</span>
+                <p class="timeline-desc">
+                  Designed end-to-end web and mobile applications across fintech, healthcare, and e-commerce. Authored multi-brand atomic design token architectures with 100% WCAG AAA accessibility compliance.
+                </p>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="timeline-item">
+                <span class="timeline-period">2023 — 2024</span>
+                <span class="timeline-role">Front-End & Interactive Prototyping</span>
+                <span class="timeline-company">Design & Development Exploration</span>
+                <p class="timeline-desc">
+                  Mastered semantic HTML5, modern CSS3 layout engines (Grid & Flexbox), and vanilla JavaScript. Built high-fidelity micro-interactions and published community design resources.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Matrix -->
+          <div class="narrative-block">
+            <h3>Disciplines & Toolkit</h3>
+            <div class="skills-matrix">
+              <!-- Design Skills -->
+              <div class="skill-category">
+                <span class="skill-category-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                  </svg>
+                  Product & UI Craft
+                </span>
+                <div class="skill-tag-cloud">
+                  <span class="tag">Figma</span>
+                  <span class="tag">FigJam</span>
+                  <span class="tag">ProtoPie</span>
+                  <span class="tag">Design Tokens</span>
+                  <span class="tag">Micro-Interactions</span>
+                  <span class="tag">Information Architecture</span>
+                </div>
+              </div>
+
+              <!-- Research Skills -->
+              <div class="skill-category">
+                <span class="skill-category-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  UX Research & Validation
+                </span>
+                <div class="skill-tag-cloud">
+                  <span class="tag">User Interviews</span>
+                  <span class="tag">Usability Testing</span>
+                  <span class="tag">Maze</span>
+                  <span class="tag">Dovetail</span>
+                  <span class="tag">Heuristic Audits</span>
+                  <span class="tag">A/B Testing</span>
+                </div>
+              </div>
+
+              <!-- Technical Skills -->
+              <div class="skill-category">
+                <span class="skill-category-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  Front-End Literacy
+                </span>
+                <div class="skill-tag-cloud">
+                  <span class="tag">Semantic HTML5</span>
+                  <span class="tag">CSS3 / Modern Grid</span>
+                  <span class="tag">Vanilla JavaScript</span>
+                  <span class="tag">WCAG 2.2 AAA</span>
+                  <span class="tag">Git / GitHub</span>
+                  <span class="tag">Design Handoff</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. TESTIMONIALS & ENDORSEMENTS
+         ====================================================================== -->
+    <section class="section section--border-top" style="background-color: transparent;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Endorsements</span>
+          <h2 class="section-title">What Colleagues & Leaders Say</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Quote 1 -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "Nihar has the rare ability to bridge deep qualitative user research with world-class visual taste. Even as a BCA student, his understanding of component systems and interaction flow rival senior designers."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SL</div>
+              <div class="author-info">
+                <h4>Sarah Lin</h4>
+                <p>VP of Product, Kinetix Technologies</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quote 2 -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "As an engineer, collaborating with Nihar is an absolute pleasure. His Figma specs are mathematically airtight, tokens are systematic, and his computer science background means he understands front-end implementation deeply."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MR</div>
+              <div class="author-info">
+                <h4>Marcus Reynolds</h4>
+                <p>Staff Frontend Architect, OmniTech</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quote 3 -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "Nihar doesn't just design screens—he designs systems and clarity. His work on Aura transformed our mobile app from another generic health tracker into an Apple Design Award contender."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">CK</div>
+              <div class="author-info">
+                <h4>Camilla Thorne</h4>
+                <p>Design Director, Aura Health Labs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. CONTACT SECTION & DIRECT INQUIRY
+         ====================================================================== -->
+    <section class="section section--border-top contact-section" id="contact">
+      <div class="container contact-grid">
+        <!-- Contact Left Column -->
+        <div class="contact-info-col">
+          <span class="section-eyebrow">05 / Contact</span>
+          <h2 class="contact-headline">
+            Let’s create something thoughtful together.
+          </h2>
+          <p class="section-description">
+            Whether you have an upcoming product launch, an open senior design role, or an internship opportunity at an ambitious studio, I’d love to connect.
+          </p>
+
+          <!-- Direct Email Box with 1-Click Copy -->
+          <div class="contact-direct-card">
+            <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-tertiary); text-transform: uppercase;">
+              Direct Email
+            </span>
+            <div class="email-display-box">
+              <span class="email-address">nihar.sakalni.design@example.com</span>
+              <button class="copy-email-btn" type="button" aria-label="Copy email address to clipboard">
+                Copy Email
+              </button>
+            </div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary);">
+              Typically responds within 24 hours. Open for internships, apprenticeships & junior roles.
+            </p>
+          </div>
+
+          <!-- Professional Links -->
+          <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+            <span style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-tertiary); text-transform: uppercase;">
+              Profiles & Socials
+            </span>
+            <div class="social-links-list">
+              <a href="https://read.cv" target="_blank" rel="noopener noreferrer" class="social-pill">
+                Read.cv ↗
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                LinkedIn ↗
+              </a>
+              <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                Dribbble ↗
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                GitHub ↗
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                Twitter / X ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Right Column: Interactive Form -->
+        <div class="contact-form-card">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">
+            Send an Inquiry
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: var(--space-2);">
+            Fill out the details below and I'll be in touch promptly.
+          </p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="formName" class="form-label">Your Name *</label>
+              <input type="text" id="formName" name="name" class="form-control" placeholder="Jane Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="formEmail" class="form-label">Your Email *</label>
+              <input type="email" id="formEmail" name="email" class="form-control" placeholder="jane@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="formInquiryType" class="form-label">Inquiry Type</label>
+              <select id="formInquiryType" name="inquiryType" class="form-control">
+                <option value="full-time">Full-Time Senior UI/UX Role</option>
+                <option value="contract">Design Contract / Freelance</option>
+                <option value="internship">Studio Internship / Apprenticeship</option>
+                <option value="consulting">Design Systems Consulting</option>
+                <option value="hello">Just Saying Hello</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="formMessage" class="form-label">Project Details or Role Description *</label>
+              <textarea id="formMessage" name="message" class="form-control form-textarea" placeholder="Tell me about your product, timeline, and goals..." required></textarea>
+            </div>
+
+            <div class="form-feedback" id="formFeedback"></div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-2);">
+              Send Message
+              <span class="btn-icon">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       9. SITE FOOTER & COLOPHON
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-colophon">
+        <span class="colophon-text">
+          © 2026 Nihar Sakalni. Handcrafted with semantic HTML5, CSS3, & vanilla JavaScript.
+        </span>
+        <span class="colophon-specs">
+          Typeset in Plus Jakarta Sans & JetBrains Mono • Zero external JS frameworks • Accessible WCAG AAA.
+        </span>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: var(--space-6);">
+        <span id="footerLocalTime" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-tertiary);">
+          San Francisco, CA
+        </span>
+        <a href="#hero" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top of page">
+          Back to Top ↑
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       10. IMMERSIVE CASE STUDY DRAWER MODAL
+       ======================================================================== -->
+  <div class="modal-overlay" id="caseStudyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+    <div class="modal-drawer">
+      <!-- Sticky Modal Bar -->
+      <div class="modal-sticky-bar">
+        <div class="modal-nav-meta">
+          <span id="modalCategoryBadge" class="tag tag--cobalt">Case Study</span>
+          <span id="modalTitle" style="font-size: 0.875rem; font-weight: 700; color: var(--text-primary); max-width: 400px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+            Project Details
+          </span>
+        </div>
+        <button class="modal-close-btn" onclick="closeCaseStudyModal()" aria-label="Close Case Study Modal">
+          ✕
+        </button>
+      </div>
+
+      <!-- Dynamic Modal Body Content -->
+      <div class="modal-body" id="caseStudyModalBody">
+        <!-- Injected dynamically via js/case-studies.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       11. INTERACTIVE RESUME PREVIEW MODAL
+       ======================================================================== -->
+  <div class="modal-overlay" id="resumeModal" role="dialog" aria-modal="true" aria-labelledby="resumeTitle" tabindex="-1">
+    <div class="resume-modal-dialog">
+      <!-- Sticky Bar -->
+      <div class="modal-sticky-bar">
+        <span id="resumeTitle" style="font-size: 0.9375rem; font-weight: 700; color: var(--text-primary);">
+          Curriculum Vitae — Nihar Sakalni
+        </span>
+        <div style="display: flex; align-items: center; gap: var(--space-2);">
+          <button class="btn btn-secondary btn-sm" id="printResumeBtn">
+            Print / PDF
+          </button>
+          <button class="modal-close-btn" id="closeResumeModal" aria-label="Close Resume Modal">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Formatted Resume Sheet -->
+      <div class="resume-paper">
+        <header class="resume-header">
+          <div>
+            <h1 class="resume-name">Nihar Sakalni</h1>
+            <p class="resume-title">UI/UX Designer • BCA 1st Year Student</p>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 4px;">
+              nihar.sakalni.design@example.com • portfolio.niharsakalni.design
+            </p>
+          </div>
+          <div style="text-align: right;">
+            <span class="tag tag--cobalt">Seeking Design Internships</span>
+          </div>
+        </header>
+
+        <section style="margin-bottom: var(--space-6);">
+          <h2 style="font-size: 0.875rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--accent-cobalt); margin-bottom: var(--space-2);">
+            Executive Summary
+          </h2>
+          <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+            Passionate UI/UX Designer and 1st-Year BCA (Bachelor of Computer Applications) student combining computer science foundations with user-centered digital product design. Experienced in user research, wireframing, high-fidelity UI design in Figma, and front-end implementation with semantic HTML5, modern CSS3, and vanilla JavaScript. Dedicated to building accessible, mathematically structured design token systems and intuitive workflows.
+          </p>
+        </section>
+
+        <section style="margin-bottom: var(--space-6);">
+          <h2 style="font-size: 0.875rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--accent-cobalt); margin-bottom: var(--space-3);">
+            Education
+          </h2>
+          <div style="display: flex; justify-content: space-between; font-weight: 700;">
+            <div>
+              <strong>Bachelor of Computer Applications (BCA) — 1st Year</strong><br>
+              <span style="font-size: 0.8125rem; color: var(--text-secondary);">Undergraduate Degree Program • Expected Class of 2028</span>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--accent-cobalt);">2026 — Present</span>
+          </div>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 6px; line-height: 1.6;">
+            Core Subjects & Focus: Computer Programming Fundamentals, Web Technologies & Architecture, Database Systems, Data Structures, and Human-Computer Interaction (HCI).
+          </p>
+        </section>
+
+        <section style="margin-bottom: var(--space-6);">
+          <h2 style="font-size: 0.875rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--accent-cobalt); margin-bottom: var(--space-3);">
+            Projects & Design Experience
+          </h2>
+          
+          <div style="margin-bottom: var(--space-4);">
+            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+              <span>UI/UX Product Designer — Independent Product Practice</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem;">2024 — Present</span>
+            </div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 4px;">
+              • Designed 4 comprehensive end-to-end products: Kinetix (FinTech trading rebalancer), Aura Health (circadian mobile app), Prism OS (enterprise design tokens), and Vesper (3D spatial e-commerce).<br>
+              • Conducted qualitative user interviews, user journey mapping, and usability validation tests.<br>
+              • Architected full atomic design token libraries with 100% WCAG 2.2 AAA accessibility compliance.
+            </p>
+          </div>
+
+          <div style="margin-bottom: var(--space-4);">
+            <div style="display: flex; justify-content: space-between; font-weight: 700;">
+              <span>Front-End Prototyping & Web Development</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8125rem;">2023 — 2024</span>
+            </div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: 4px;">
+              • Built interactive responsive prototypes using vanilla HTML5, CSS3 (Grid & Flexbox), and JavaScript.<br>
+              • Published open-source UI design components and Figma design systems with community adoption.<br>
+              • Created custom CSS micro-interactions and accessible keyboard-navigable components.
+            </p>
+          </div>
+        </section>
+
+        <section style="margin-bottom: var(--space-6);">
+          <h2 style="font-size: 0.875rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--accent-cobalt); margin-bottom: var(--space-3);">
+            Honors & Achievements
+          </h2>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6;">
+            • Dean's Academic Honors List (BCA 1st Year)<br>
+            • UI/UX Design Hackathon Finalist (Concept: Accessible Healthcare Interfaces)<br>
+            • Active Open-Source & Figma Community Resource Contributor
+          </p>
+        </section>
+
+        <section>
+          <h2 style="font-size: 0.875rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--accent-cobalt); margin-bottom: var(--space-2);">
+            Core Competencies
+          </h2>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6;">
+            <strong>Design:</strong> Product Thinking, User Research, Wireframing, High-Fidelity UI, Micro-Interactions, Design Systems, Design Tokens, Mobile App UX (iOS & Android), Web Layouts.<br>
+            <strong>Research & Strategy:</strong> Qualitative Interviews, Usability Testing, Heuristic Evaluation, User Journey Maps, Information Architecture, Maze.<br>
+            <strong>Technical Skills:</strong> Semantic HTML5, Modern CSS3 (Grid/Flexbox), Vanilla JavaScript, WCAG 2.2 AAA Accessibility, Git / GitHub, Computer Science Fundamentals (BCA).
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vanilla JavaScript Application Scripts -->
+  <script src="js/space-background.js"></script>
+  <script src="js/case-studies.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

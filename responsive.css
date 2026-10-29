@@ -1,0 +1,172 @@
+/* ==========================================================================
+   PREMIUM UI/UX DESIGNER PORTFOLIO — RESPONSIVE STYLESHEET
+   Refined breakpoints for 1024px, 768px, and 480px viewports
+   ========================================================================== */
+
+/* --- Tablet / Compact Desktop (<= 1024px) --- */
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 24px;
+    --space-24: 72px;
+    --space-20: 56px;
+    --space-16: 48px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .hero-visual-card {
+    max-width: 640px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .project-card,
+  .project-card--reversed {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .project-card--reversed .project-visual {
+    order: 1;
+  }
+
+  .project-card--reversed .project-details {
+    order: 2;
+  }
+
+  .project-visual {
+    aspect-ratio: 16 / 10;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .about-portrait-card {
+    position: static;
+    max-width: 480px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .case-meta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Mobile Landscape & Portrait (<= 768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 18px;
+    --space-24: 56px;
+    --space-20: 44px;
+    --space-16: 36px;
+    --space-12: 28px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .hero-headline {
+    font-size: 2.15rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .canvas-token-chips {
+    grid-template-columns: 1fr;
+  }
+
+  .component-sandbox {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-bar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+  }
+
+  .project-impact-box {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-drawer {
+    max-width: 100%;
+  }
+
+  .modal-sticky-bar {
+    padding: 12px 18px;
+  }
+
+  .modal-body {
+    padding: var(--space-6) var(--space-4) var(--space-16);
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* --- Small Mobile (<= 480px) --- */
+@media (max-width: 480px) {
+  .hero-meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-card {
+    padding: var(--space-4);
+  }
+
+  .case-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-paper {
+    padding: var(--space-5);
+  }
+
+  .resume-header {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}
+
